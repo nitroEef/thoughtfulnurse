@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+/* ── SECTION WRAPPER ── */
+.ttn-bs-section {
+  position: relative;
+  padding: 100px 2.5rem 110px;
+  font-family: 'Jost', sans-serif;
+  overflow: hidden;
+  /* warm cream — feels like pressed flowers, not clinical white */
+  background: linear-gradient(160deg, #fdf6f0 0%, #faf0f4 50%, #f3f7f2 100%);
+}
+
+/* ── SVG BACKGROUND ── */
+.ttn-bs-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── HEADER ROW ── */
+.ttn-bs-header {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto 3.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.ttn-bs-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #b5606a;
+  margin-bottom: 0.9rem;
+}
+.ttn-bs-label-line {
+  display: inline-block;
+  width: 28px;
+  height: 1.5px;
+  background: #C0162B;
+}
+
+.ttn-bs-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: #1a1a1a;
+  margin: 0 0 0.7rem;
+}
+.ttn-bs-heading em {
+  font-style: italic;
+  color: #C0162B;
+}
+
+.ttn-bs-sub {
+  font-size: 0.92rem;
+  color: #888;
+  line-height: 1.75;
+  margin: 0;
+  max-width: 420px;
+}
+
+/* view all button */
+.ttn-bs-view-all {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.77rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  background: #C0162B;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: background 0.22s, transform 0.22s;
+  text-decoration: none;
+}
+.ttn-bs-view-all:hover {
+  background: #8B0F1F;
+  transform: translateY(-2px);
+}
+.ttn-bs-view-all svg {
+  width: 13px;
+  height: 13px;
+  transition: transform 0.2s;
+}
+.ttn-bs-view-all:hover svg {
+  transform: translateX(3px);
+}
+
+/* ── GRID ── */
+.ttn-bs-grid {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.ttn-bs-card:first-child {
+  grid-column: span 2;
+}
+
+/* ── CARD ── */
+.ttn-bs-card {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 22px;
+  border: 1px solid rgba(210, 160, 170, 0.18);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+.ttn-bs-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 55px rgba(180, 100, 120, 0.14);
+}
+
+.ttn-bs-card-thumb {
+  height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.ttn-bs-card:first-child .ttn-bs-card-thumb {
+  height: 185px;
+}
+
+.ttn-bs-card-thumb::before,
+.ttn-bs-card-thumb::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  pointer-events: none;
+}
+.ttn-bs-card-thumb::before { width: 130px; height: 130px; }
+.ttn-bs-card-thumb::after  { width: 200px; height: 200px; }
+
+.ttn-bs-card-thumb-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.ttn-bs-card-cat {
+  position: absolute;
+  top: 13px;
+  left: 14px;
+  font-size: 0.59rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.ttn-bs-card-body {
+  padding: 1.15rem 1.35rem 0.6rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ttn-bs-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1a1a1a;
+  margin: 0;
+}
+.ttn-bs-card:first-child .ttn-bs-card-title {
+  font-size: 1.38rem;
+}
+
+.ttn-bs-card-excerpt {
+  font-size: 0.78rem;
+  color: #888;
+  line-height: 1.75;
+  flex: 1;
+  margin: 0;
+}
+
+.ttn-bs-card-footer {
+  padding: 0.6rem 1.35rem 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ttn-bs-card-cta {
+  font-size: 0.69rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #C0162B;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.ttn-bs-card-cta svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s;
+}
+.ttn-bs-card:hover .ttn-bs-card-cta svg {
+  transform: translateX(3px);
+}
+
+.ttn-bs-card-time {
+  font-size: 0.66rem;
+  color: #ccc;
+}
+
+/* ── SKELETON ── */
+.ttn-bs-skel {
+  background: linear-gradient(90deg, #f5eeee 25%, #fce9eb 50%, #f5eeee 75%);
+  background-size: 200% 100%;
+  animation: ttn-shimmer 1.6s infinite;
+  border-radius: 6px;
+}
+@keyframes ttn-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── ACCENT PILLS ── */
+.ttn-bs-accent-pills {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 2.5rem auto 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.ttn-bs-pill {
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #b5606a;
+  background: rgba(210, 140, 155, 0.1);
+  border: 1px solid rgba(210, 140, 155, 0.22);
+  border-radius: 50px;
+  padding: 5px 14px;
+}
+.ttn-bs-pill-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(181, 96, 106, 0.3);
+  flex-shrink: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+  .ttn-bs-grid { grid-template-columns: 1fr 1fr; }
+  .ttn-bs-card:first-child { grid-column: span 2; }
+  .ttn-bs-section { padding: 75px 1.5rem 85px; }
+}
+@media (max-width: 560px) {
+  .ttn-bs-grid { grid-template-columns: 1fr; }
+  .ttn-bs-card:first-child { grid-column: span 1; }
+  .ttn-bs-header { flex-direction: column; align-items: flex-start; }
+  .ttn-bs-accent-pills { display: none; }
+}

@@ -1,0 +1,347 @@
+/* ============================================
+   HEADER — Nursing Portfolio
+   Glamorous Red & White Aesthetic
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Jost:wght@300;400;500&display=swap');
+
+/* ---- CSS Variables ---- */
+:root {
+  --red: #c0152a;
+  --red-deep: #8b0e1e;
+  --red-light: #e8192f;
+  --white: #ffffff;
+  --off-white: #fdf6f6;
+  --cream: #faf0f0;
+  --red-muted: rgba(192, 21, 42, 0.08);
+  --red-border: rgba(192, 21, 42, 0.2);
+  --text-dark: #1a0608;
+  --text-muted: #7a3540;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Base ---- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: var(--white);
+  border-bottom: 1px solid var(--red-border);
+  transition: box-shadow var(--transition), background var(--transition);
+  font-family: 'Jost', sans-serif;
+}
+
+.header--scrolled {
+  box-shadow: 0 4px 32px rgba(192, 21, 42, 0.1);
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+}
+
+/* ---- Top Availability Bar ---- */
+.header__topbar {
+  background: var(--red);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 24px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.header__topbar-dot {
+  width: 7px;
+  height: 7px;
+  background: #7fff7f;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(127, 255, 127, 0.25);
+  animation: pulse 2.2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(127, 255, 127, 0.25); }
+  50%       { box-shadow: 0 0 0 7px rgba(127, 255, 127, 0.08); }
+}
+
+/* ---- Inner Row ---- */
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 56px;
+  height: 76px;
+  gap: 32px;
+}
+
+/* ---- Logo ---- */
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.header__logo-cross {
+  font-size: 26px;
+  color: var(--red);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.header__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.header__logo-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: 0.01em;
+}
+
+.header__logo-role {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-top: 4px;
+}
+
+/* ---- Desktop Nav ---- */
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  flex: 1;
+  justify-content: center;
+}
+
+.header__nav-link {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color var(--transition);
+}
+
+.header__nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--red);
+  transition: width var(--transition);
+}
+
+.header__nav-link:hover {
+  color: var(--red);
+}
+
+.header__nav-link:hover::after,
+.header__nav-link--active::after {
+  width: 100%;
+}
+
+.header__nav-link--active {
+  color: var(--red);
+}
+
+/* ---- CTA Button ---- */
+.header__cta {
+  flex-shrink: 0;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: background var(--transition), transform 0.15s;
+}
+
+.header__cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--red-deep);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition);
+}
+
+.header__cta:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.header__cta span,
+.header__cta {
+  position: relative;
+  z-index: 1;
+}
+
+.header__cta:active {
+  transform: scale(0.97);
+}
+
+/* ---- Hamburger ---- */
+.header__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+.header__hamburger span {
+  display: block;
+  width: 26px;
+  height: 1.5px;
+  background: var(--text-dark);
+  transform-origin: center;
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s;
+}
+
+.header__hamburger--open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+  background: var(--red);
+}
+.header__hamburger--open span:nth-child(2) {
+  opacity: 0;
+}
+.header__hamburger--open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+  background: var(--red);
+}
+
+/* ---- Mobile Menu ---- */
+.header__mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--white);
+  border-top: 1px solid var(--red-border);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__mobile-menu--open {
+  max-height: 400px;
+}
+
+.header__mobile-link {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 18px 32px;
+  border-bottom: 1px solid rgba(192, 21, 42, 0.06);
+  transition: color var(--transition), padding-left var(--transition);
+}
+
+.header__mobile-link:hover {
+  color: var(--red);
+  padding-left: 42px;
+}
+
+.header__mobile-cta {
+  margin: 20px 32px 28px;
+  background: var(--red);
+  color: var(--white);
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  transition: background var(--transition);
+}
+
+.header__mobile-cta:hover {
+  background: var(--red-deep);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .header__inner {
+    padding: 0 32px;
+  }
+
+  .header__nav {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__inner {
+    padding: 0 24px;
+    height: 68px;
+  }
+
+  .header__nav,
+  .header__cta {
+    display: none;
+  }
+
+  .header__hamburger {
+    display: flex;
+  }
+
+  .header__mobile-menu {
+    display: flex;
+  }
+
+  .header__topbar {
+    font-size: 10px;
+    padding: 7px 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .header__logo-name {
+    font-size: 17px;
+  }
+
+  .header__inner {
+    padding: 0 16px;
+  }
+}
