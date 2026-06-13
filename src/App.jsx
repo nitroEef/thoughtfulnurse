@@ -1,15 +1,13 @@
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Homepage from './components/Homepage';
-import BlogPage from './components/Blog/Blogpage';
+import Homepage from "./components/Homepage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/thoughtfulnurse">
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/blog" element={<BlogPage />} />
       </Routes>
     </BrowserRouter>
   );
