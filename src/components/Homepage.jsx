@@ -7,18 +7,19 @@ import Testimonials from './Testimonial/Testimonial';
 import Footer from './Footer/Footer';
 import BlogPreview from './Blog/Blogpreview';
 
+import Reveal from '../components/Reveal';
+
 function Homepage() {
   return (
     <>
-      <Header />
-      <Hero />
-      <About />
-      <Services />
-      <Testimonials />
-      <Contact />
-    <BlogPreview />
-    <Footer />
-
+      <Reveal><Header /></Reveal>
+      <Reveal><Hero /></Reveal>
+      <Reveal><About /></Reveal>
+      <Reveal><Services /></Reveal>
+      <Reveal><Testimonials /></Reveal>
+      <Reveal><Contact /></Reveal>
+      <Reveal><BlogPreview /></Reveal>
+      <Reveal><Footer /></Reveal>
     </>
   );
 }

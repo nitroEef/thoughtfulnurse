@@ -1,8 +1,6 @@
-
 {
   "name": "ukmadam",
   "private": true,
-  
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -12,11 +10,10 @@
     "preview": "vite preview",
     "predeploy": "npm run build"
   },
-
-  
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "emailjs": "^5.0.1",
+    "framer-motion": "^12.40.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.17.0"
