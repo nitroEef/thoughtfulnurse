@@ -54,8 +54,8 @@ body { background: var(--cream); }
   padding: 3.5rem 1.5rem 6rem;
 }
 
-/* ── HERO ── */
-.hero {
+/* ── heroin ── */
+.heroin {
   text-align: center;
   margin-bottom: 3rem;
   padding: 0;
@@ -92,7 +92,7 @@ body { background: var(--cream); }
   50%      { transform: scale(1.6); opacity: 0.4; }
 }
 
-.hero-title {
+.heroin-title {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(1.8rem, 5.5vw, 3.4rem);
   font-weight: 700;
@@ -104,13 +104,13 @@ body { background: var(--cream); }
   opacity: 0;
   animation: riseIn 0.9s 0.4s ease forwards;
 }
-.hero-title span {
+.heroin-title span {
   display: block;
   font-style: italic;
   color: var(--rose);
 }
 
-.hero-lead {
+.heroin-lead {
   font-size: clamp(0.93rem, 2.4vw, 1.05rem);
   color: var(--muted);
   line-height: 1.78;
@@ -331,30 +331,52 @@ body { background: var(--cream); }
 @media (max-width: 768px) {
   .page { padding: 2.8rem 1.4rem 5rem; }
   .card-body { padding: 2rem 2rem; }
-  .hero { margin-bottom: 2.4rem; }
+  .heroin { margin-bottom: 2.4rem; }
   .glow-box { padding: 1.6rem 1.5rem; }
   .mom-box { padding: 1.3rem 1.4rem; }
+}
+
+/* ── heroin FIX: 755px and below ── */
+@media (max-width: 755px) {
+  .heroin { margin-bottom: 2rem; }
+  .badge {
+    font-size: 0.63rem;
+    letter-spacing: 0.07em;
+    padding: 5px 13px;
+    max-width: 100%;
+  }
+  .heroin-title {
+    font-size: clamp(1.6rem, 5.5vw, 2.2rem);
+    line-height: 1.2;
+  }
+  .heroin-lead {
+    font-size: 0.93rem;
+    line-height: 1.72;
+    max-width: 100%;
+  }
+  .hb-wrap { margin: 1.3rem 0 1.8rem; }
 }
 
 /* ── MOBILE (max 540px) ── */
 @media (max-width: 540px) {
   .page { padding: 2.2rem 1.1rem 4.5rem; }
 
-  /* Hero */
-  .hero { margin-bottom: 2rem; }
+  /* heroin */
+  .heroin { margin-bottom: 1.8rem; }
   .badge {
-    font-size: 0.62rem;
-    letter-spacing: 0.07em;
-    padding: 6px 14px;
+    font-size: 0.60rem;
+    letter-spacing: 0.06em;
+    padding: 5px 12px;
     max-width: 100%;
+    white-space: normal;
   }
-  .hero-title {
-    font-size: clamp(1.65rem, 7.5vw, 2.2rem);
-    line-height: 1.22;
+  .heroin-title {
+    font-size: clamp(1.5rem, 7vw, 1.9rem);
+    line-height: 1.24;
   }
-  .hero-title br { display: none; }
-  .hero-lead { font-size: 0.92rem; line-height: 1.72; }
-  .hb-wrap { margin: 1.4rem 0 1.8rem; }
+  .heroin-title br { display: none; }
+  .heroin-lead { font-size: 0.89rem; line-height: 1.7; max-width: 100%; }
+  .hb-wrap { margin: 1.1rem 0 1.5rem; }
 
   /* Card */
   .card { border-radius: 16px; }
@@ -404,9 +426,10 @@ body { background: var(--cream); }
 @media (max-width: 380px) {
   .page { padding: 1.8rem 0.9rem 4rem; }
   .card-body { padding: 1.3rem 1.1rem; }
-  .badge { font-size: 0.59rem; padding: 5px 12px; letter-spacing: 0.06em; }
-  .hero-title { font-size: 1.55rem; line-height: 1.25; }
-  .hero-lead { font-size: 0.88rem; }
+  .badge { font-size: 0.57rem; padding: 4px 11px; letter-spacing: 0.05em; }
+  .heroin-title { font-size: 1.48rem; line-height: 1.26; }
+  .heroin-lead { font-size: 0.85rem; line-height: 1.68; }
+  .hb-wrap { margin: 1rem 0 1.3rem; }
   .glow-box { padding: 1.1rem 1rem; }
   .mom-box { padding: 1rem 0.9rem; }
   .pill { font-size: 0.72rem; padding: 4px 10px; }
@@ -476,20 +499,20 @@ export default function NursePortfolioNote() {
         </div>
 
         <div className="page">
-          <div className="hero">
+          <div className="heroinin">
             <div className="badge">
               <span className="badge-dot" />
               The Thoughtful Nurse · Portfolio Note
             </div>
-            <h1 className="hero-title">
+            <h1 className="heroinin-title">
               A Safe Space{' '}
               <span>Starts With a Conversation</span>
             </h1>
-            <p className="hero-lead">
+            <p className="heroinin-lead">
               What every young girl deserves to know — and what every mother should feel empowered to say.
             </p>
             <div className="hb-wrap">
-              <svg width="100%" viewBox="0 0 700 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="100%" viewBox="0 0 700 62" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="hbg" x1="0" y1="0" x2="700" y2="0" gradientUnits="userSpaceOnUse">
                     <stop offset="0%" stopColor="#1b4f4a" />

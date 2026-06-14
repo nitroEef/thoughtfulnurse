@@ -584,20 +584,7 @@ export default function Footer() {
         </div>
 
         {/* ── NEWSLETTER ── */}
-        <div className="footer-newsletter">
-          <div className="footer-newsletter-text">
-            <span className="footer-newsletter-title">Stay in the Know 💌</span>
-            <span className="footer-newsletter-sub">Get health tips, puberty guides & new content straight to your inbox.</span>
-          </div>
-          <div className="footer-newsletter-form">
-            <input
-              type="email"
-              className="footer-newsletter-input"
-              placeholder="Enter your email address"
-            />
-            <button className="footer-newsletter-btn">Subscribe</button>
-          </div>
-        </div>
+ 
 
         {/* ── BOTTOM BAR ── */}
         <div className="footer-bottom">
