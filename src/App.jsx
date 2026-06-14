@@ -5,7 +5,7 @@ import Homepage from "./components/Homepage";
 
 function App() {
   return (
-    <BrowserRouter basename="/thoughtfulnurse">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage />} />
       </Routes>
