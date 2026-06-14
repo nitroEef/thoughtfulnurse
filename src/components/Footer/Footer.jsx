@@ -554,14 +554,14 @@ export default function Footer() {
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                   <polyline points="22,6 12,13 2,6"/>
                 </svg>
-                <a href="mailto:hello@thethoughtfulnurse.com">hello@thethoughtfulnurse.com</a>
+                <a href="thoughtfulnurse01@gmail.com">thoughtfulnurse01@gmail.com</a>
               </div>
               <div className="footer-contact-item">
                 <svg fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                   <circle cx="12" cy="10" r="3"/>
                 </svg>
-                Nigeria · Available Worldwide
+                Available Worldwide
               </div>
               <div className="footer-contact-item">
                 <svg fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
@@ -591,12 +591,7 @@ export default function Footer() {
           <div className="footer-bottom-left">
             © {new Date().getFullYear()} The Thoughtful Nurse · Made with <span>❤️</span> for every girl & her mum
           </div>
-          <div className="footer-bottom-right">
-            <a href="#" className="footer-bottom-link">Privacy Policy</a>
-            <a href="#" className="footer-bottom-link">Terms of Use</a>
-            <a href="#" className="footer-bottom-link">Medical Disclaimer</a>
-            <a href="#" className="footer-bottom-link">Sitemap</a>
-          </div>
+         
         </div>
 
       </footer>

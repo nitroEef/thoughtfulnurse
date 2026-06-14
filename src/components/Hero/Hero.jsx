@@ -503,8 +503,8 @@ export default function Hero() {
                 </svg>
               </div>
               <div className="hero-floating-badge-text">
-                <span className="hero-floating-badge-num">4,000+</span>
-                <span className="hero-floating-badge-label">Followers</span>
+                <span className="hero-floating-badge-num">4m</span>
+                <span className="hero-floating-badge-label">views in 2 months</span>
               </div>
             </div>
           </div>
