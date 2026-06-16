@@ -405,7 +405,7 @@ export default function Contact() {
             </h2>
 
             <p className="contact-body">
-              Whether you're a health brand, school, organisation, or parent looking for partnership or collaboration — I'd love to hear from you. Let's work together to make health information simple, relatable, and impactful for every family.
+              Whether you're a mum, dad, daughter, guardian, school, organisation, or parent looking for partnership or collaboration — I'd love to hear from you. Let's work together to make health information simple, relatable, and impactful for every family.
             </p>
 
             <div className="contact-details">
@@ -445,7 +445,7 @@ export default function Contact() {
                 </div>
                 <div className="contact-detail-text">
                   <span className="contact-detail-label">Community</span>
-                  <span className="contact-detail-value">1,000+ followers across platforms</span>
+                  <span className="contact-detail-value">more than 8,000+ followers across platforms</span>
                 </div>
               </div>
             </div>
@@ -519,7 +519,7 @@ export default function Contact() {
                     name="from_name"
                     type="text"
                     className="form-input"
-                    placeholder="Oruko re"
+                    placeholder="Your full name pls"
                     value={form.from_name}
                     onChange={handleChange}
                     required

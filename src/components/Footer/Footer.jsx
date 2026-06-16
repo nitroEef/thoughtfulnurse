@@ -491,10 +491,11 @@ export default function Footer() {
             </p>
 
             <div className="footer-socials">
-              <a href="https://www.instagram.com/thethoughtfulnurse" target="_blank" rel="noreferrer" className="footer-social instagram" aria-label="Instagram">
+              <a href="
+https://www.instagram.com/the_thoughtful_nurse?igsh=cnZ6c3l2bjBiOWY4&utm_source=qr" target="_blank" rel="noreferrer" className="footer-social instagram" aria-label="Instagram">
                 <InstagramIcon />
               </a>
-              <a href="https://www.tiktok.com/@thethoughtfulnurse" target="_blank" rel="noreferrer" className="footer-social tiktok" aria-label="TikTok">
+              <a href="https://www.tiktok.com/@thoughtfulnurse?_r=1&_t=ZN-970hMShuuFa" target="_blank" rel="noreferrer" className="footer-social tiktok" aria-label="TikTok">
                 <TikTokIcon />
               </a>
             </div>
@@ -577,7 +578,7 @@ export default function Footer() {
                   <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                 </svg>
-                4,000+ Community Members
+                8,000+ Community Members
               </div>
             </div>
           </div>
