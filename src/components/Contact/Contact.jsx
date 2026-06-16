@@ -456,7 +456,7 @@ export default function Contact() {
               <div className="contact-socials">
                 {/* Instagram */}
                 <a
-                  href="https://www.instagram.com/thethoughtfulnurse"
+                  href="https://www.instagram.com/the_thoughtful_nurse?igsh=cnZ6c3l2bjBiOWY4&utm_source=qr"
                   target="_blank"
                   rel="noreferrer"
                   className="contact-social-btn social-instagram"
@@ -469,7 +469,7 @@ export default function Contact() {
 
                 {/* TikTok */}
                 <a
-                  href="https://www.tiktok.com/@thethoughtfulnurse"
+                  href="https://www.tiktok.com/@thoughtfulnurse?_r=1&_t=ZN-970hMShuuFa"
                   target="_blank"
                   rel="noreferrer"
                   className="contact-social-btn social-tiktok"
