@@ -343,7 +343,6 @@ const INQUIRY_OPTIONS = [
   "Health Content Creation",
   "Brand Collaboration",
   "Sponsored Content",
-  "Product Review",
   "Awareness Campaign",
   "Speaking / Workshop",
   "Other",
