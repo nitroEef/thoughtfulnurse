@@ -6,6 +6,8 @@ import Contact from './Contact/Contact';
 import Testimonials from './Testimonial/Testimonial';
 import Footer from './Footer/Footer';
 import BlogPreview from './Blog/Blogpreview';
+import Drive from './Drive';
+
 
 import Reveal from '../components/Reveal';
 
@@ -16,6 +18,7 @@ function Homepage() {
       <Reveal><Hero /></Reveal>
       <Reveal><About /></Reveal>
       <Reveal><Services /></Reveal>
+      <Reveal><Drive/></Reveal>
       <Reveal><Testimonials /></Reveal>
       <Reveal><Contact /></Reveal>
       <Reveal><BlogPreview /></Reveal>
